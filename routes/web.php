@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/users', 'UserController@index');
+Route::get('/persons', 'PersonController@index');
+Route::get('/persons/register', 'PersonController@register');
+Route::get('/persons/{id}', 'PersonController@view');
